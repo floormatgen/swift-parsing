@@ -3,7 +3,7 @@
 
 extension Parser where Self.Output: Sequence {
   
-  /// Returns a ``Parser`` that reduces the output of a parser into a new ``Parser``
+  /// Returns a parser that reduces the output of a parser into a new parser
   ///
   /// This method is similar to `Sequence.reduce(_:_:)` in the Swift standard library.
   ///
@@ -31,7 +31,7 @@ extension Parser where Self.Output: Sequence {
     .init(upstream: self, initialResult: initialResult, nextPartialResult: nextPartialResult)
   }
   
-  /// Returns a ``Parser`` that reduces the output of a parser into new ``Parser``
+  /// Returns a parser that reduces the output of a parser into new parser
   ///
   /// This method is similar to `Sequence.reduce(into:_:)` in the Swift standard library.
   ///
@@ -112,7 +112,7 @@ extension Parsers {
     
     @inlinable
     @inline(__always)
-    public func parse(_ input: inout Upstream.Input) throws -> NewOutput {
+    public func parse(_ input: inout Upstream.Input) rethrows -> NewOutput {
       try self.upstream.parse(&input).reduce(into: self.initialResult, self.updateAccumulatingResult)
     }
     

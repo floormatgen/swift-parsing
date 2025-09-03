@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-parsing}",
+            "name": "Debug swift-parsing-benchmark",
+            "program": "${workspaceFolder:swift-parsing}/.build/debug/swift-parsing-benchmark",
+            "preLaunchTask": "swift: Build Debug swift-parsing-benchmark"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-parsing}",
+            "name": "Release swift-parsing-benchmark",
+            "program": "${workspaceFolder:swift-parsing}/.build/release/swift-parsing-benchmark",
+            "preLaunchTask": "swift: Build Release swift-parsing-benchmark"
+        }
+    ]
+}

@@ -63,6 +63,8 @@ to build complex parsers from simpler pieces.
 - ``Parser/map(_:)-4hsj5``
 - ``flatMap(_:)``
 - ``compactMap(_:)``
+- ``reduce(_:_:)``
+- ``reduce(into:_:)``
 - ``filter(_:)``
 - ``pullback(_:)``
 - ``replaceError(with:)``
